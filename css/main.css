@@ -261,3 +261,7 @@ ol li {
 .main-sec-3_text img {
     width: 300px;
 }
+.solution .btn{
+    height: 20px;
+    padding-top: 2px;
+}

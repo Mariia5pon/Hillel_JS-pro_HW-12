@@ -34,8 +34,8 @@
 				<h4>There are two buttons on the page. When clicking on the first button, the user has to enter a link
 					in the prompt, and when clicking on the second button, the user is redirected to another site (using
 					the previously entered link).</h4>
-				<input type="button" class="btn" value="Enter a link"/>
-				<input type="button" class="btn" value="Go to the site"/>
+				<input type="button" id="btn1" class="btn" value="Enter a link"/>
+				<input type="button" id="btn2" class="btn" value="Go to the site"/>
 			</div>
 		</div>
 	</section>
@@ -56,7 +56,7 @@ Step-by-step plan:
 				</h4>
 				<img src="./img/alert.png" alt="Alert" id="img-alert">
 			</div>
-			<div class="main-sec-2_buttons">
+			<div id="btns" class="main-sec-2_buttons">
 				<button class="btn">Button 1</button>
 				<button class="btn">Button 2</button>
 				<button class="btn">Button 3</button>
@@ -70,16 +70,27 @@ Step-by-step plan:
 				<h4>Create an HTML page that contains a to-do list with the ability to add new tasks. Your goal is to
 					use event delegation to create an event handler for the to-do list that will allow you to delete
 					tasks when you click on them.</h4>
-					<h4>Step-by-step plan:</h4>
+				<h4>Step-by-step plan:</h4>
 				<ol>
 					<li>Create HTML elements: a list of ul tasks, a text field for entering new tasks, and a button for
-						adding new tasks.</li>
+						adding new tasks.
+					</li>
 					<li>Add an event handler to the ul task list using delegation.</li>
 					<li>When you click on any delete button, delete this item.</li>
-					<li>Add the ability to enter new tasks in the text field and add them to the list using the button.</li>
+					<li>Add the ability to enter new tasks in the text field and add them to the list using the
+						button.
+					</li>
 				</ol>
 				<img src="./img/task_3.png" alt="ToDo list">
-				
+			</div>
+			<div class="solution">
+				<ul id="task-list">
+					<li>Task 1 <input type="button" class="btn delete-btn" value="Delete"/></li>
+					<li>Task 2 <input type="button" class="btn delete-btn" value="Delete"/></li>
+					<li>Task 3 <input type="button" class="btn delete-btn" value="Delete"/></li>
+				</ul>
+				<input type="text" id="new-task-input" placeholder="Enter new task"  />
+				<input type="button" id="add-task-btn" class="btn" value="Add"/>
 			</div>
 		</div>
 	</section>
