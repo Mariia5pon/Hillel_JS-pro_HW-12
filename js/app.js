@@ -31,6 +31,7 @@ btns.addEventListener('click', (event) =>{
     }
 });
 
+
 // TASK 3
 const taskList = document.querySelector('#task-list');
 const addTaskBtn = document.querySelector('#add-task-btn');
