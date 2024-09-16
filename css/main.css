@@ -137,6 +137,7 @@ input[type="text"] {
     padding: 15px;
     border-radius: 10px;
     border: 5px solid whitesmoke;
+    margin-top: 10px;
 }
 
 input[type="text"]:hover{

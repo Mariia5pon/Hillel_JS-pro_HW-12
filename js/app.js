@@ -30,7 +30,44 @@ btns.addEventListener('click', (event) =>{
         alert(`You clicked on ${event.target.textContent}`);
     }
 });
+
 // TASK 3
+const taskList = document.querySelector('#task-list');
+const addTaskBtn = document.querySelector('#add-task-btn');
+const newTaskInput = document.querySelector('#new-task-input');
+
+function createTaskElement(taskText) {
+    const newTask = document.createElement('li');
+    newTask.textContent = taskText;
+
+    const deleteBtn = document.createElement('input');
+    deleteBtn.type = 'button';
+    deleteBtn.value = 'Delete';
+    deleteBtn.classList.add('btn', 'delete-btn');
+    deleteBtn.style.marginLeft = '10px';
+    newTask.appendChild(deleteBtn);
+    return newTask;
+}
+
+taskList.addEventListener('click', (event) => {
+    if (event.target.tagName === 'INPUT' && event.target.classList.contains('delete-btn')) {
+        event.target.parentElement.remove();
+    }
+});
+
+addTaskBtn.addEventListener('click' , () => {
+    const taskText = newTaskInput.value.trim();
+    if (taskText !== '') {
+        const newTask = createTaskElement(taskText);
+        taskList.appendChild(newTask);
+        newTaskInput.value = '';
+    }
+});
+
+
+
+
+
 
 
 
