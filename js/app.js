@@ -5,12 +5,21 @@ const btn1 = document.querySelector('#btn1');
 let userLink;
 btn1.addEventListener('click', () => {
     userLink=prompt('Enter your link, please.');
-    console.log(userLink);
+    if(userLink && (userLink.startsWith('http://') || userLink.startsWith('https://'))) {
+        console.log(userLink);
+    } else {
+        alert('Please enter a link!');
+        userLink = undefined;
+    }
 });
 
 const btn2 = document.querySelector('#btn2');
 btn2.addEventListener('click',()=>{
-    window.location.href = userLink;
+    if (userLink) {
+        window.location.href = userLink;
+    } else {
+        alert('Please enter a link!');
+    }
 });
 
 // TASK 2
